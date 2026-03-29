@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Text Detection Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="brand-mini">🧠 AI Text Detection Pro</span>
+    <div class="nav-links">
+      <a href="login.html">Login</a>
+      <a href="signup.html" class="pill">Sign Up</a>
+    </div>
+  </nav>
+
+  <main class="screen-center">
+    <section class="glass-card">
+      <h1>🧠 AI Text Detection</h1>
+
+      <label for="fileInput" class="drop-zone" id="dropZone">
+        <input id="fileInput" type="file" accept=".txt,text/plain" hidden />
+        <span>Drag &amp; Drop or Click</span>
+        <small>Only .txt files for this demo</small>
+      </label>
+
+      <div class="actions">
+        <button id="extractBtn" class="btn btn-cyan" type="button">Extract</button>
+        <button id="copyBtn" class="btn btn-green" type="button">Copy</button>
+        <button id="downloadBtn" class="btn btn-yellow" type="button">Download</button>
+      </div>
+
+      <textarea id="outputText" placeholder="Extracted text will appear here..."></textarea>
+
+      <div class="stats" id="stats"></div>
+      <p id="statusMsg" class="status">Ready.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
