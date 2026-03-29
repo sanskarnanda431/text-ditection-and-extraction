@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Detection & Extraction</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <h1>Text Detection & Extraction</h1>
+      <p>Paste text or upload a <code>.txt</code> file to detect and extract useful data instantly.</p>
+    </header>
+
+    <section class="panel input-panel">
+      <h2>Input</h2>
+      <div class="input-actions">
+        <label for="fileInput" class="btn secondary">Upload Text File</label>
+        <input id="fileInput" type="file" accept=".txt,text/plain" hidden />
+        <button id="sampleBtn" class="btn ghost" type="button">Load Sample</button>
+        <button id="clearBtn" class="btn ghost" type="button">Clear</button>
+      </div>
+      <textarea id="textInput" placeholder="Paste or type any text here..."></textarea>
+      <button id="analyzeBtn" class="btn primary" type="button">Detect & Extract</button>
+    </section>
+
+    <section class="panel">
+      <h2>Detected Overview</h2>
+      <div class="stats-grid" id="statsGrid"></div>
+    </section>
+
+    <section class="panel results">
+      <h2>Extracted Data</h2>
+      <div class="result-columns">
+        <article>
+          <h3>Emails</h3>
+          <ul id="emailsList" class="result-list"></ul>
+        </article>
+        <article>
+          <h3>Phone Numbers</h3>
+          <ul id="phonesList" class="result-list"></ul>
+        </article>
+        <article>
+          <h3>URLs</h3>
+          <ul id="urlsList" class="result-list"></ul>
+        </article>
+        <article>
+          <h3>Dates</h3>
+          <ul id="datesList" class="result-list"></ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

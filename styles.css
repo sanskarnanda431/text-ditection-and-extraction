@@ -1,0 +1,151 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --border: #1f2937;
+  --chip: #1e293b;
+  --success: #10b981;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, var(--bg) 60%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  width: min(1100px, 92vw);
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+.panel {
+  background: color-mix(in oklab, var(--panel) 92%, black);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.input-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #020617;
+  color: var(--text);
+  padding: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.65rem 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  margin-top: 0.8rem;
+}
+
+.btn.primary:hover { background: var(--primary-hover); }
+
+.btn.secondary {
+  background: var(--chip);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.8rem;
+}
+
+.stat-card {
+  background: #020617;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.stat-card .label {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.stat-card .value {
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.result-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.result-list li {
+  background: #020617;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.ok {
+  color: var(--success);
+}
